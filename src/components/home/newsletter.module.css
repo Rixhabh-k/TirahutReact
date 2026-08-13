@@ -1,0 +1,239 @@
+.section {
+  padding: 1rem 1rem;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  background-color: #ACC35E;
+}
+
+.inner {
+  margin: 0 auto;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1.4fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
+
+.side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1024px) {
+  .side {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}
+
+.sideLeft,
+.sideRight {
+  position: relative;
+  min-height: 340px;
+}
+
+.planeWrap {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 9999px;
+  border: 2px solid #000;
+  background-color: #f4c93b;
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1c1917;
+  flex-shrink: 0;
+}
+
+.plane {
+  width: 2.5rem;
+  height: 2.5rem;
+  transform: rotate(-12deg);
+}
+
+.makhanaWrap {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 2px solid #000;
+  background-color: #fff;
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 1);
+  flex-shrink: 0;
+}
+
+.leftPlane {
+  top: 2%;
+  left: 18%;
+  transform: rotate(-8deg);
+}
+
+.leftMakhana1 {
+  top: 30%;
+  left: 4%;
+  transform: rotate(-12deg);
+}
+
+.leftMakhana2 {
+  top: 56%;
+  left: 42%;
+  transform: rotate(10deg);
+}
+
+.rightMakhana1 {
+  top: 4%;
+  left: 30%;
+  transform: rotate(10deg);
+}
+
+.rightMakhana2 {
+  top: 38%;
+  left: 6%;
+  transform: rotate(-10deg);
+}
+
+.rightMakhana3 {
+  top: 62%;
+  left: 38%;
+  transform: rotate(6deg);
+}
+
+.makhana {
+  object-fit: cover;
+}
+
+.headingWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--font-realistic-nature), serif;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: #0c0a09;
+  line-height: 1.15;
+}
+
+.headingAccent {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-rustic-delight), cursive;
+  font-weight: 400;
+
+}
+
+.subtitle {
+  margin: 1.25rem 0 0;
+  font-family: var(--font-realistic-nature), serif;
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  letter-spacing: 0.04em;
+  color: #1c1917;
+  line-height: 1.6;
+}
+
+.formWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 420px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  width: 100%;
+  height: 40px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.5rem 1.25rem;
+  border: 0px solid #000;
+  border-radius: 10px;
+  background-color: #fff;
+  font-family: var(--font-realistic-nature), serif;
+  font-size: 1rem;
+  color: #1c1917;
+  outline: none;
+  transition: box-shadow 200ms, transform 200ms;
+}
+
+.input::placeholder {
+  color: #a8a29e;
+}
+
+.input:focus {
+  transform: translate(2px, 2px);
+}
+
+.button {
+  padding: 0.5rem 1.75rem;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: var(--font-realistic-nature), serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: box-shadow 200ms, transform 200ms;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transform: translateX(-15px);
+}
+
+.button:hover {
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 1);
+  transform: translate(2px, 2px);
+}
+
+@media (max-width: 1023px) {
+  .sideLeft,
+  .sideRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 0;
+    width: 100%;
+  }
+
+  .sideLeft .planeWrap,
+  .sideLeft .makhanaWrap,
+  .sideRight .planeWrap,
+  .sideRight .makhanaWrap {
+    position: static;
+    top: auto;
+    left: auto;
+  }
+}

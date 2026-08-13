@@ -1,0 +1,21 @@
+.container {
+  min-height: 100vh;
+  background-color: #FDF6E9;
+  color: #1c1917;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3rem;
+}
+
+.blob {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 16rem;
+  height: 16rem;
+  background-color: #84c664;
+  border-top-right-radius: 9999px;
+  z-index: -10;
+  opacity: 0.8;
+}

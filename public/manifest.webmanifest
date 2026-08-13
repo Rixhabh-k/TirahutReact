@@ -1,0 +1,16 @@
+{
+  "name": "Tirahut",
+  "short_name": "Tirahut",
+  "description": "Premium roasted makhana that is crunchy, light, and packed with nutrients. A super snack for your evenings.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDF6E9",
+  "theme_color": "#FDF6E9",
+  "icons": [
+    {
+      "src": "/images/Logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
