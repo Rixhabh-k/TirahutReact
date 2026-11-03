@@ -27,7 +27,7 @@ export default function NewsletterSection() {
               <div key={img.src} className={`${styles.makhanaWrap} ${img.className}`}>
                 <FillImage
                   src={img.src}
-                  alt="Makhana"
+                  alt=""
                   className={styles.makhana}
                 />
               </div>
@@ -65,7 +65,7 @@ export default function NewsletterSection() {
               <div key={img.src} className={`${styles.makhanaWrap} ${img.className}`}>
                 <FillImage
                   src={img.src}
-                  alt="Makhana"
+                  alt=""
                   className={styles.makhana}
                 />
               </div>

@@ -77,7 +77,7 @@
 .carousel {
   position: relative;
   max-width: 1200px;
-  margin: 3.5rem auto 0;
+  margin: 2.5rem auto 0;
 }
 
 .viewport {
@@ -197,14 +197,19 @@
   box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 1);
 }
 
-@media (max-width: 1024px) {
-  .controls {
-    left: 0.5rem;
-    right: 0.5rem;
+/* Desktop: arrows sit in the gutters outside the cards */
+@media (min-width: 1024px) {
+  .viewport {
+    margin: 0 4rem;
   }
 }
 
-@media (max-width: 640px) {
+/* Phones and tablets: arrows go under the cards */
+@media (max-width: 1023px) {
+  .viewport {
+    margin: 0;
+  }
+
   .controls {
     position: static;
     transform: none;
@@ -212,7 +217,9 @@
     gap: 1rem;
     margin-top: 1.75rem;
   }
+}
 
+@media (max-width: 640px) {
   .card {
     padding: 1.5rem 1.25rem 1.25rem;
   }

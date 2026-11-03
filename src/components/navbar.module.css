@@ -31,6 +31,12 @@
   gap: 1rem;
 }
 
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .header {
+    margin: 0 1rem;
+  }
+}
+
 @media (max-width: 640px) {
   .header {
     height: 60px;
@@ -49,19 +55,20 @@
 
 .logo {
   position: relative;
-  width: 9rem;
-  height: 100%;
+  width: 6.5rem;
+  height: 3.25rem;
 }
 
 @media (max-width: 640px) {
   .logo {
-    width: 5.5rem;
+    width: 4.5rem;
+    height: 2.75rem;
   }
 }
 
 .logoImage {
   object-fit: contain;
-  scale: 1.2;
+  rotate: 8deg;
 }
 
 .nav {
@@ -72,9 +79,15 @@
   font-size: 1.125rem;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .nav {
     display: flex;
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav {
     gap: 2rem;
   }
 }
@@ -104,7 +117,7 @@
   gap: 0.75rem;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .actions {
     gap: 1rem;
   }
@@ -129,7 +142,7 @@
   transform: translate(1px, 1px);
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1023px) {
   .actions > .shopButton {
     display: none;
   }
@@ -187,7 +200,7 @@
   display: none;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1023px) {
   .menuButton {
     display: flex;
   }

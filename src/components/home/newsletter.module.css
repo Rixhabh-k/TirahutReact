@@ -1,8 +1,9 @@
 .section {
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   background-color: #ACC35E;
+  overflow: hidden;
 }
 
 .inner {
@@ -13,13 +14,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.25rem;
 }
 
 @media (min-width: 1024px) {
   .layout {
     display: grid;
-    grid-template-columns: 1fr 1.4fr 1.4fr 1fr;
+    grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.4fr) minmax(0, 1.4fr) minmax(0, 0.6fr);
     gap: 1.5rem;
     align-items: center;
   }
@@ -44,17 +45,13 @@
 .sideLeft,
 .sideRight {
   position: relative;
-  min-height: 340px;
+  min-height: 130px;
 }
 
 .planeWrap {
   position: absolute;
-  width: 90px;
-  height: 90px;
-  border-radius: 9999px;
-  border: 2px solid #000;
-  background-color: #f4c93b;
-  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 1);
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,61 +60,54 @@
 }
 
 .plane {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.75rem;
+  height: 1.75rem;
   transform: rotate(-12deg);
 }
 
 .makhanaWrap {
   position: absolute;
-  width: 90px;
-  height: 90px;
-  border-radius: 9999px;
-  overflow: hidden;
-  border: 2px solid #000;
-  background-color: #fff;
-  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 1);
+  width: 68px;
+  height: 68px;
   flex-shrink: 0;
 }
 
 .leftPlane {
-  top: 2%;
-  left: 18%;
+  top: 18%;
+  left: 38%;
   transform: rotate(-8deg);
 }
 
 .leftMakhana1 {
   top: 30%;
-  left: 4%;
+  left: 14%;
   transform: rotate(-12deg);
 }
 
 .leftMakhana2 {
-  top: 56%;
-  left: 42%;
+  top: 62%;
+  left: 52%;
   transform: rotate(10deg);
 }
 
 .rightMakhana1 {
-  top: 4%;
-  left: 30%;
+  top: 12%;
+  left: 50%;
   transform: rotate(10deg);
 }
 
 .rightMakhana2 {
-  top: 38%;
-  left: 6%;
+  top: 58%;
+  left: 72%;
   transform: rotate(-10deg);
 }
 
 .rightMakhana3 {
-  top: 62%;
-  left: 38%;
-  transform: rotate(6deg);
+  display: none;
 }
 
 .makhana {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .headingWrap {
@@ -125,42 +115,40 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 420px;
+  max-width: 360px;
   margin: 0 auto;
 }
 
 .heading {
   margin: 0;
   font-family: var(--font-realistic-nature), serif;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
   font-weight: 900;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: #0c0a09;
   line-height: 1.15;
 }
 
 .headingAccent {
-  position: relative;
-  display: inline-block;
-  font-family: var(--font-rustic-delight), cursive;
-  font-weight: 400;
-
+  display: block;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
 .subtitle {
-  margin: 1.25rem 0 0;
+  margin: 0.5rem 0 0;
   font-family: var(--font-realistic-nature), serif;
-  font-size: clamp(1rem, 2.5vw, 1.15rem);
-  letter-spacing: 0.04em;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
   color: #1c1917;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 .formWrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 420px;
+  max-width: 440px;
   margin: 0 auto;
   width: 100%;
 }
@@ -170,50 +158,48 @@
   flex-direction: row;
   gap: 0;
   width: 100%;
-  height: 40px;
+  height: 48px;
 }
 
 .input {
   flex: 1;
   min-width: 0;
-  padding: 0.5rem 1.25rem;
-  border: 0px solid #000;
-  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+  border: 0;
+  border-radius: 6px 0 0 6px;
   background-color: #fff;
   font-family: var(--font-realistic-nature), serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: #1c1917;
   outline: none;
   transition: box-shadow 200ms, transform 200ms;
 }
 
 .input::placeholder {
-  color: #a8a29e;
+  color: #1c1917;
 }
 
-.input:focus {
-  transform: translate(2px, 2px);
+.input:focus-visible {
+  box-shadow: inset 0 0 0 2px #000;
 }
 
 .button {
-  padding: 0.5rem 1.75rem;
-  border: 2px solid #000;
-  border-radius: 10px;
+  padding: 0.5rem 2.25rem;
+  border: 0;
+  border-radius: 0 6px 6px 0;
   background-color: #000000;
   color: #ffffff;
   font-family: var(--font-realistic-nature), serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 700;
   cursor: pointer;
   transition: box-shadow 200ms, transform 200ms;
   white-space: nowrap;
   flex-shrink: 0;
-  transform: translateX(-15px);
-}
+  }
 
 .button:hover {
-  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 1);
-  transform: translate(2px, 2px);
+  background-color: #1c1917;
 }
 
 @media (max-width: 1023px) {
